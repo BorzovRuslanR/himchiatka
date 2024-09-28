@@ -57,6 +57,7 @@ document.querySelectorAll('.main-swiper .swiper-slide').forEach(slide => {
 
     modal.style.display = "flex"; // Открываем модальное окно
     modalSwiper.update(); // Обновляем внутренний слайдер
+    modalSwiper.slideTo(0, 0); // Переходим на первый слайд
   };
 });
 
