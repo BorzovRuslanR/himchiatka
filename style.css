@@ -774,3 +774,35 @@ ul {
 .modal-prev {
   color:#007bff;
 }
+
+
+/* <==================== ЭЛЕМЕНТЫ И СТОИМОСТЬ ===================> */
+.prices {
+  margin-bottom: 60px;
+}
+.prices-unit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.icon-item {
+  flex: 1 1 calc(40% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.icon-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icon-item p {
+  margin: 5px 0;
+}
+
+.prices h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--white-color)
+}
