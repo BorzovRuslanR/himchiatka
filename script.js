@@ -17,17 +17,17 @@ const showMenu = (toggleId, navId) =>{
 
  // ==================== СЛАЙДЕР ====================
 
- const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+ const mainSwiper = new Swiper('.main-swiper', {
+  loop: true,
+  pagination: {
+    el: '.main-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.main-next',
+    prevEl: '.main-prev',
+  },
+});
 
 
  // ==================== МОДАЛКА ====================
@@ -47,7 +47,7 @@ const modalSwiper = new Swiper('.modal-swiper', {
 });
 
 // Добавляем обработчик события для всех слайдов
-document.querySelectorAll('.swiper-slide').forEach(slide => {
+document.querySelectorAll('.main-swiper .swiper-slide').forEach(slide => {
   slide.onclick = () => {
     const beforeImg = slide.querySelector('.before').src;
     const afterImg = slide.querySelector('.after').src;
@@ -55,7 +55,7 @@ document.querySelectorAll('.swiper-slide').forEach(slide => {
     document.getElementById('modal-before').src = beforeImg;
     document.getElementById('modal-after').src = afterImg;
 
-    modal.style.display = "block";
+    modal.style.display = "flex"; // Открываем модальное окно
     modalSwiper.update(); // Обновляем внутренний слайдер
   };
 });
