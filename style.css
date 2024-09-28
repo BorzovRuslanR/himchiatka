@@ -701,9 +701,6 @@ ul {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center; 
 }
 
 .modal-slider-container {
