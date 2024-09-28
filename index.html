@@ -9,6 +9,10 @@
       rel="stylesheet"
     />
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="../style.css" />
   </head>
     <body>
@@ -18,7 +22,7 @@
             <div class="nav__data">
               <a href="#" class="nav__logo">
                 <img class="logo-icon" src="../icon/icons8-vacuuming-cute-clipart/logo-64.png" alt="Логотип" />
-                CLEAN HOUSE
+                <p class="logo-text">CLEAN HOUSE</p>
               </a>
 
               <div class="nav__toggle" id="nav-toggle">
@@ -82,7 +86,7 @@
             </video>
             <div class="overlay">
               <h1>Химчистка мягкой мебели на дому в Волгограде</h1>
-              <button>Вызвать мастера</button>
+              <button>ВЫЗВЫТЬ МАСТЕРА</button>
             </div>
           </div>
 
@@ -106,7 +110,7 @@
           </div>
 
           <div class="text-container">
-            <p class="text">Компания «CLEAN HOUSE» предлагает услуги химчистки мягкой мебели с выездом на дом в Москве и Московской области.
+            <p class="text">Компания «CLEAN HOUSE» предлагает услуги химчистки мягкой мебели с выездом на дом в Волгограде и Волгоградской области.
               Наши специалисты оперативно и качественно помогут вам избавиться от загрязнений на обивке мебели самого различного
               происхождения. Все работы проводятся прямо у заказчика с помощью профессионального оборудования Karcher и
               профессиональных моющих средств. Мы гарантируем высокое качество услуг по чистке диванов, кресел, пуфиков, угловых
@@ -195,7 +199,39 @@
                   чистящие средства, а затем вбирается, оставляя мебель почти сухой.</p>
               </div>
             </div>
+          </div>
+          <div class="results">
+            <h2>Результаты работ</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/images/beforeAndAfter/1/1-1.jpg" alt="До 1" class="before">
+                  <img src="/images/beforeAndAfter/1/1-2.jpg" alt="После 1" class="after">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/beforeAndAfter/2/2-1.jpg" alt="До 2" class="before">
+                  <img src="/images/beforeAndAfter/2/2-2.jpg" alt="После 2" class="after">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/beforeAndAfter/3/3-1.jpg" alt="До 3" class="before">
+                  <img src="/images/beforeAndAfter/3/3-2.jpg" alt="После 3" class="after">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/beforeAndAfter/4/4-1.jpg" alt="До 4" class="before">
+                  <img src="/images/beforeAndAfter/4/4-2.jpg" alt="После 4" class="after">
+                </div>
+                <div class="swiper-slide">
+                  <img src="/images/beforeAndAfter/5/5-1.jpg" alt="До 5" class="before">
+                  <img src="/images/beforeAndAfter/5/5-2.jpg" alt="После 5" class="after">
+                </div>
+              </div>
+              <!-- Навигационные кнопки -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <!-- Пагинация -->
+              <div class="swiper-pagination"></div>
             </div>
+          </div>
         </main>
         <footer class="footer">
           <div class="socialFooter">
@@ -236,7 +272,27 @@
             </div>
           </div>
         </footer>
+        <!----------- МОДАЛЬНОЕ ОКНО -------------------->
+        <div id="modal" class="modal">
+          <span class="close">&times;</span>
+          <div class="modal-slider-container">
+            <div class="swiper-container modal-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="modal-content" id="modal-before">
+                </div>
+                <div class="swiper-slide">
+                  <img class="modal-content" id="modal-after">
+                </div>
+              </div>
+              <!-- Навигационные кнопки -->
+              <div class="swiper-button-next modal-next"></div>
+              <div class="swiper-button-prev modal-prev"></div>
+            </div>
+          </div>
+        </div>
       </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <script src="../script.js"></script>
     </body>
 </html>
