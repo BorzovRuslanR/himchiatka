@@ -19,6 +19,8 @@ const showMenu = (toggleId, navId) =>{
 
  const mainSwiper = new Swiper('.main-swiper', {
   loop: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
   pagination: {
     el: '.main-pagination',
     clickable: true,
@@ -49,15 +51,17 @@ const modalSwiper = new Swiper('.modal-swiper', {
 // Добавляем обработчик события для всех слайдов
 document.querySelectorAll('.main-swiper .swiper-slide').forEach(slide => {
   slide.onclick = () => {
-    const beforeImg = slide.querySelector('.before').src;
-    const afterImg = slide.querySelector('.after').src;
+    if (window.innerWidth <= 1024) {
+      const beforeImg = slide.querySelector('.before').src;
+      const afterImg = slide.querySelector('.after').src;
 
-    document.getElementById('modal-before').src = beforeImg;
-    document.getElementById('modal-after').src = afterImg;
+      document.getElementById('modal-before').src = beforeImg;
+      document.getElementById('modal-after').src = afterImg;
 
-    modal.style.display = "flex"; // Открываем модальное окно
-    modalSwiper.update(); // Обновляем внутренний слайдер
-    modalSwiper.slideTo(0, 0); // Переходим на первый слайд
+      modal.style.display = "flex"; // Открываем модальное окно
+      modalSwiper.update(); // Обновляем внутренний слайдер
+      modalSwiper.slideTo(0, 0); // Переходим на первый слайд
+    }
   };
 });
 
