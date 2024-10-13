@@ -28,7 +28,7 @@
 }
 
 html, body {
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -56,7 +56,7 @@ ul {
 
 .container {
   max-width: 1920px;
-  margin-inline: 3rem;
+  margin-inline: 1.5rem;
 
   @media screen and (min-width: 1400px) and (max-width: 1600px) {
     margin-inline: 6rem;
@@ -103,6 +103,17 @@ ul {
   align-items: center;
 }
 
+.nav__contacts {
+  display: flex;
+  align-items: center;
+  column-gap: .7rem;
+}
+
+.nav__icon {
+  width: 24px;
+  height: 24px;
+}
+
 .nav__logo {
   display: inline-flex;
   align-items: center;
@@ -113,6 +124,10 @@ ul {
 .nav__logo i {
   font-weight: initial;
   font-size: 1.25rem;
+
+  @media (max-width: 330px) {
+    font-size: 1rem;
+  }
 }
 
 .nav__toggle {
@@ -140,6 +155,10 @@ ul {
 .logo-text {
   font-size: 22px;
   font-weight: 600;
+  
+  @media (max-width: 330px) {
+    font-size: 16px;
+  }
 }
 
 /* Navigation vor mobile devices */
@@ -809,10 +828,51 @@ ul {
   color: var(--white-color)
 }
 
+/* <================ КНОПКА ПОЯВЛЯЮЩАЯСЯ ПРИ СКРОЛЛЕ ВНИЗ ===================> */
+
+.floating-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(241, 233, 233);
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.floating-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* transform: translateY(-2px); */
+}
+
+.floating-button:active {
+  background-color: #004494;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1);
+  /* transform: translateY(0); */
+}
+
 
 /* <==================== МЕДИА ЗАПРОСЫ ===================> */
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  .nav__contacts {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
   .video-container {
     height: 400px;
     max-height: 450px;
@@ -836,6 +896,11 @@ ul {
 }
 
 @media (min-width: 1025px) {
+
+  .nav__contacts {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
 
   /* ВИДЕО */
   .video-container {
@@ -1045,6 +1110,7 @@ ul {
 }
 
 @media (min-width: 1600px) {
+
   .swiper-slide {
     height: 700px;
   }
@@ -1059,5 +1125,19 @@ ul {
 
   .price {
     font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .floating-button {
+    padding: 24px 34px;
+    font-size: 2rem;
+    bottom: 20px;
+    left: 85%;
+    transform: translateX(-50%);
+  }
+  .nav__contacts {
+    display: none;
   }
 }

@@ -116,3 +116,21 @@ function generateIconsHTML(icons) {
 
 // Вызов функции для генерации HTML
 generateIconsHTML(icons);
+
+// Кнопка вызвать мастера
+function openTelegram() {
+  window.open("https://t.me/superclean34", "_blank");
+}
+
+// Кнопка вызвать мастера при скроле
+
+document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+      const floatingButton = document.querySelector('.floating-button');
+        if (window.scrollY > 300) { 
+            floatingButton.style.display = 'block';
+        } else {
+            floatingButton.style.display = 'none';
+        }
+  });
+});

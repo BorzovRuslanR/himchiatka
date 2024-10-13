@@ -1,0 +1,109 @@
+:root {
+  --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
+  --primary-color: #333;
+  --secondary-color: #f4f4f4;
+
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: 0.938rem;
+
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  --header-height: 3.8rem;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--body-font);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: var(--black-color-light);
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: var(--black-color-lighten);
+}
+
+.socialFooter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  font-size: 2rem;
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.footer-content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-info {
+  margin-top: 1rem;
+}
+
+.footer-legal {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+}
